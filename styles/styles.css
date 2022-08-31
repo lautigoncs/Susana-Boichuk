@@ -73,6 +73,7 @@
 }
 /* handwritten font */
 /* text font */
+/* hero  section */
 #mainHeroMain {
   display: flex;
   flex-direction: column;
@@ -119,7 +120,7 @@
 
 .SBButton {
   padding: 1%;
-  border: solid 4px white;
+  outline: solid 4px white;
   color: white;
   background-color: rgba(255, 255, 255, 0.48);
   font-family: "Work Sans", sans-serif;
@@ -127,7 +128,7 @@
   font-size: 1.5vw;
   width: 15%;
   cursor: pointer;
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.8s, border 0.3s;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.8s, outline 0.3s;
 }
 .SBButton:hover {
   transform: scale(103%);
@@ -145,7 +146,29 @@
   transform: scale(96.5%);
   background-color: rgba(255, 255, 255, 0.413);
   box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.334);
-  border: solid 4px rgb(212, 212, 212);
+  outline: solid 4px rgb(212, 212, 212);
+}
+
+.SBBUttonDark {
+  outline: solid 2.5px rgb(0, 0, 0);
+  color: black;
+  background-color: rgba(184, 184, 184, 0.28);
+  width: 27%;
+}
+.SBBUttonDark:hover {
+  background-color: rgba(0, 0, 0, 0.168);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.234);
+}
+@media (max-width: 1024px) {
+  .SBBUttonDark:hover {
+    background-color: rgba(184, 184, 184, 0.28);
+    box-shadow: 0px 0px 0px;
+  }
+}
+.SBBUttonDark:active {
+  background-color: rgba(51, 51, 51, 0.413);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.334);
+  outline: solid 2px rgb(0, 0, 0);
 }
 
 @media (max-width: 1200px) and (min-width: 651px) {
@@ -156,6 +179,9 @@
     font-size: 2.5vw;
     width: 18%;
   }
+  .SBBUttonDark {
+    width: 70%;
+  }
 }
 @media (max-width: 650px) {
   .mainTitle {
@@ -164,10 +190,17 @@
   .SBButton {
     font-size: 3.5vw;
     width: 22%;
-    border: solid 2px white;
+    outline: solid 2px white;
   }
   .SBButton:active {
-    border: solid 2px rgb(212, 212, 212);
+    outline: solid 2px rgb(212, 212, 212);
+  }
+  .SBBUttonDark {
+    width: 70%;
+    outline: solid 2px black;
+  }
+  .SBBUttonDark:active {
+    outline: solid 2px rgb(0, 0, 0);
   }
 }
 @media (max-width: 500px) {
@@ -184,10 +217,10 @@
     width: 96vw;
   }
 }
-/* TEXT SECTION */
+/* text  section */
 .mainTextSection {
   display: flex;
-  height: 35vh;
+  min-height: 35vh;
   align-items: center;
   padding: 1.5% 3%;
 }
@@ -199,14 +232,27 @@
   font-family: "Work Sans", sans-serif;
   font-weight: 300;
   position: relative;
-  left: 55px;
   background-color: #fff;
   font-size: 1.4vw;
+  margin-bottom: 5%;
+}
+
+.mainTextContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 55px;
+}
+.mainTextContainer a {
+  text-align: start !important;
 }
 
 #mainTxt2 {
   position: relative !important;
   left: -56px !important;
+  text-align: right !important;
+}
+#mainTxt2 a {
   text-align: right !important;
 }
 
@@ -218,23 +264,36 @@
   .mainTxtImg {
     width: 43vw;
   }
+  .mainTxtText {
+    font-size: 1.7vw;
+  }
 }
 @media (max-width: 800px) and (min-width: 651px) {
   .mainTxtImg {
     width: 60vw;
   }
 }
-@media (max-width: 650px) {
+@media (max-width: 900px) {
   .mainTextSection {
     flex-direction: column-reverse !important;
     margin: 2%;
-    height: 70vw;
+    min-height: 100vw;
+    justify-content: flex-end;
   }
   .mainTextSection p, .mainTextSection #mainTxt2 {
     text-align: center !important;
+    max-width: 100%;
+    font-size: 3.5vw;
     left: 0 !important;
-    max-width: 85%;
-    font-size: 2.6vw;
+  }
+  .mainTextSection p a, .mainTextSection #mainTxt2 a {
+    text-align: center !important;
+  }
+  .mainTextSection .mainTextContainer {
+    left: 0 !important;
+  }
+  .mainTextSection .mainTextContainer a {
+    text-align: center !important;
   }
   .mainTxtImg {
     width: 70vw;
@@ -252,7 +311,7 @@
     width: 90vw;
   }
 }
-/* FEATURED SECTION */
+/* featured  section */
 #featuredSection {
   display: flex;
   flex-direction: column;
@@ -267,7 +326,8 @@
   font-weight: normal;
   font-size: 2vw;
 }
-#featuredSection .allPaintingsButton {
+
+.allPaintingsButton {
   width: 100%;
   text-align: center;
 }
@@ -302,6 +362,12 @@
 .fetaturedImageContainer:hover {
   transform: scale(102%);
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.434);
+}
+@media (max-width: 1000px) {
+  .fetaturedImageContainer:hover {
+    transform: scale(100%);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2135);
+  }
 }
 .fetaturedImageContainer:active {
   transform: scale(99%);
@@ -365,7 +431,7 @@
 }
 #menuItems a {
   font-size: 2.5vw;
-  margin-bottom: 22%;
+  margin-bottom: 10vh;
   color: white;
   text-decoration: none !important;
 }
@@ -373,51 +439,62 @@
   margin-bottom: 0;
 }
 
+@media (max-height: 600px) {
+  #menuItems {
+    flex-direction: row;
+    width: 100%;
+  }
+  #menuItems a {
+    margin-bottom: 0 !important;
+    margin-right: 10vh !important;
+    font-size: 5.5vh !important;
+  }
+}
 @media (max-width: 750px) {
   #menuItems {
     width: 50%;
   }
   #menuItemOption1 {
     font-size: 4.5vw !important;
-    margin-bottom: 11% !important;
+    margin-bottom: 5vh !important;
   }
   #menuItemOption2 {
     font-size: 4.5vw !important;
-    margin-bottom: 11% !important;
+    margin-bottom: 5vh !important;
   }
   #menuItemOption3 {
     font-size: 4.5vw !important;
-    margin-bottom: 11% !important;
+    margin-bottom: 5vh !important;
   }
   #menuItemOption4 {
     font-size: 4.5vw !important;
-    margin-bottom: 11% !important;
+    margin-bottom: 5vh !important;
   }
   #menuItemOption5 {
     font-size: 4.5vw !important;
-    margin-bottom: 11% !important;
+    margin-bottom: 5vh !important;
   }
 }
 @media (max-width: 450px) {
   #menuItemOption1 {
     font-size: 11vw !important;
-    margin-bottom: 10% !important;
+    margin-bottom: 4vh !important;
   }
   #menuItemOption2 {
     font-size: 11vw !important;
-    margin-bottom: 10% !important;
+    margin-bottom: 4vh !important;
   }
   #menuItemOption3 {
     font-size: 11vw !important;
-    margin-bottom: 10% !important;
+    margin-bottom: 4vh !important;
   }
   #menuItemOption4 {
     font-size: 11vw !important;
-    margin-bottom: 10% !important;
+    margin-bottom: 4vh !important;
   }
   #menuItemOption5 {
     font-size: 11vw !important;
-    margin-bottom: 10% !important;
+    margin-bottom: 4vh !important;
   }
 }
 /*animation start*/

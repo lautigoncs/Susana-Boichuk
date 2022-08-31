@@ -30,11 +30,23 @@
     justify-content: center;
     a {
         font-size: 2.5vw;
-        margin-bottom: 22%;
+        margin-bottom: 10vh;
         color: white;
         text-decoration: none !important;
         &:last-child {
             margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-height: 600px) {
+    #menuItems {
+        flex-direction: row;
+        width: 100%;
+        a {
+            margin-bottom: 0 !important;
+            margin-right: 10vh !important;
+            font-size: 5.5vh !important;
         }
     }
 }
@@ -46,7 +58,7 @@
     @for $i from 1 to 6 {
         #menuItemOption#{$i} {
         font-size: 4.5vw !important;
-        margin-bottom: 11% !important;
+        margin-bottom: 5vh !important;
         }
     }
 }
@@ -55,7 +67,7 @@
     @for $i from 1 to 6 {
         #menuItemOption#{$i} {
         font-size: 11vw !important;
-        margin-bottom: 10% !important;
+        margin-bottom: 4vh !important;
         }
     }
 }

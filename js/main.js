@@ -10,7 +10,7 @@ window.onscroll = () => {
     let scrollValue = window.scrollY;
     // Parallax Effect
     heroContent.style.transform = 'translateY(' + -scrollValue / 5 + 'px)';
-    if (window.matchMedia('screen and (max-width: 650px)').matches) {
+    if (window.matchMedia('screen and (max-width: 900px)').matches) {
         mainTxt1.style.transform = 'translateY(' + -scrollValue / 20 + 'px)';
         mainTxt2.style.transform = 'translateY(' + -scrollValue / 20 + 'px)';
     } else {
