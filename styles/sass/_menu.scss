@@ -1,0 +1,135 @@
+#menuBackground {
+    position: fixed;
+    z-index: 99;
+    overflow: hidden;
+    background-color: rgba(255, 184, 146, 0.518);
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    animation-name: backgroundStart;
+    animation-duration: .8s;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 100;
+    height: 100vh;
+    width: 100vw;
+}
+
+#menuItems {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    a {
+        font-size: 2.5vw;
+        margin-bottom: 22%;
+        color: white;
+        text-decoration: none !important;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    #menuItems {
+        width: 50%;
+    }
+    @for $i from 1 to 6 {
+        #menuItemOption#{$i} {
+        font-size: 4.5vw !important;
+        margin-bottom: 11% !important;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    @for $i from 1 to 6 {
+        #menuItemOption#{$i} {
+        font-size: 11vw !important;
+        margin-bottom: 10% !important;
+        }
+    }
+}
+
+/*animation start*/
+@for $i from 1 to 6 {
+    #menuItemOption#{$i} {
+        animation-name: menuItemStart;
+        animation-duration: $i * 0.2s + 1s;
+        font-family: 'Work Sans', sans-serif;
+        transition: transform .3s ;
+        &:hover {
+            transform: scale(110%);
+            cursor: pointer;
+            @media (max-width: 1024px) {
+                transform: scale(100%)
+            }
+        }
+        &:active {
+            transform: scale(98%);
+        }
+    }
+}
+
+@keyframes menuItemStart {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+@keyframes backgroundStart {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+/*animation end*/
+.menuBackgroundEnd {
+    animation-name: menuBackgroundEnd !important;
+    animation-duration: .5s !important;
+}
+
+.menuItemOptionEnd {
+    animation-name: menuItemOptionEnd !important;
+    animation-duration: .4s !important;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+
+@keyframes menuBackgroundEnd {
+    100% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes menuItemOptionEnd {
+    0% {
+        transform: translateY(0);
+        opacity: 100;
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}

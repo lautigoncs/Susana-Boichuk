@@ -1,0 +1,22 @@
+@import "sass/_headerMenu.scss";
+@import "sass/_main.scss";
+@import "sass/_menu.scss";
+@import "sass/_footer.scss";
+
+* {
+    margin: 0;
+    border: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.disbleScrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.invisible {
+    display: none;
+}
