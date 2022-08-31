@@ -29,6 +29,9 @@ menuButton.onclick = () => {
         // And background
         menuBackground.classList.remove("menuBackgroundEnd");
 
+        //Remove menu icon background.
+        document.getElementsByClassName('menu-icon')[0].classList.remove('menuBackground');
+
         // Make the menu appear
         menuSpace.classList.toggle ('invisible')
         // Set menuButtonToggle to true so the menu won't open again.
@@ -57,14 +60,16 @@ function closeMenu() {
     })
     // Background
     menuBackground.classList.toggle("menuBackgroundEnd");
+    // Make the menu icon get back to its normal state
+    document.getElementsByClassName('menu-icon__cheeckbox')[0].checked = false;
+    // Apply background to the menu icon.
+    document.getElementsByClassName('menu-icon')[0].classList.add('menuBackground');
     // Set a timeout to let the animation be visible.
     setTimeout(() => {
         // Enable Scrolling
         body.classList.remove('disbleScrolling')
         // Make the menu dissapear 
         menuSpace.classList.toggle ('invisible')
-        // Make the menu icon get back to its normal state
-        document.getElementsByClassName('menu-icon__cheeckbox')[0].checked = false;
         // Set menuButtonToggle to false so the menu can be opened again.
         menuButtonToggle = false;
     }, 500)
