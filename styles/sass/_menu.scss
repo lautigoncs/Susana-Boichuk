@@ -45,8 +45,11 @@
         width: 100%;
         a {
             margin-bottom: 0 !important;
-            margin-right: 10vh !important;
-            font-size: 5.5vh !important;
+            margin-right: 4vw !important;
+            font-size: 3vw !important;
+            &:last-of-type {
+                margin-right: 0 !important;
+            }
         }
     }
 }

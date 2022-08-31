@@ -213,6 +213,9 @@
     width: 33%;
     margin: 2%;
   }
+  .SBBUttonDark {
+    width: 67%;
+  }
   .mainHeroMainBackground {
     width: 96vw;
   }
@@ -301,7 +304,7 @@
 }
 @media (max-width: 500px) {
   .mainTextSection {
-    height: 92vw;
+    height: 123vw;
   }
   .mainTextSection p, .mainTextSection #mainTxt2 {
     max-width: 100%;
@@ -446,8 +449,11 @@
   }
   #menuItems a {
     margin-bottom: 0 !important;
-    margin-right: 10vh !important;
-    font-size: 5.5vh !important;
+    margin-right: 4vw !important;
+    font-size: 3vw !important;
+  }
+  #menuItems a:last-of-type {
+    margin-right: 0 !important;
   }
 }
 @media (max-width: 750px) {
