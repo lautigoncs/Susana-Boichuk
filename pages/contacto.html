@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Susana Boichuk - Contacto</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!--LightBox 2-->
     <link rel="stylesheet" href="../styles/lightbox2/css/lightbox.css">
     <!-- Chrome, Firefox OS and Opera -->
@@ -14,9 +16,13 @@
     <meta name="msapplication-navbutton-color" content="#fff">
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('9it1OXsPSgNdyp2RY')
+    </script>
 </head>
-<body id="body">
-    <header>
+<body id="body" class="lightSection">
+    <header class="headerFix">
         <div class="menu-icon menuBackground">
             <input class="menu-icon__cheeckbox" id="menuButton" type="checkbox">
             <div>
@@ -38,6 +44,39 @@
         </div>
     </header>
     <main>
+        <article id="contactInfo">
+            <div id="contactInfoContent">
+                <div>
+                    <h1>Sobre Mi</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quo quod excepturi eveniet, quos dolores, nesciunt qui praesentium aut esse vero doloremque ex natus voluptate odio non mollitia dolore sequi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aliquam quasi, eaque ipsa ullam quae. Impedit, eos minus nesciunt reiciendis nihil ea laudantium laborum at sequi aliquid iure omnis similique?
+                    Minima ullam incidunt blanditiis beatae consectetur alias ipsum obcaecati praesentium perspiciatis totam pariatur repudiandae eaque eligendi maiores, nisi nihil consequatur a vel voluptate, ipsa qui quis debitis? Repellat, nulla nam.
+                    Odio soluta incidunt, dolorum aut a quis doloribus deleniti similique dolor dicta iste officiis vero fugiat vel natus alias. Libero deleniti vero maxime cum hic quidem temporibus architecto reiciendis! At?
+                    Esse dignissimos nobis vitae perferendis aliquam laudantium tempore modi molestias quaerat necessitatibus voluptate sunt eos neque id quibusdam, est dolor blanditiis, doloremque repellendus minima nisi voluptates eum corrupti! Nihil, corrupti!</p>
+                </div>
+                <img src="https://placedog.net/200/200">
+            </div>
+        </article>
+        <article>
+            <div class="container">
+                <form id="contactForm">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="name" type="text" placeholder="Nombre" name="from_name" data-sb-validations="required" required>
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" name="user_email" id="email" type="email" placeholder="Dirección de Email" data-sb-validations="required,email" required>
+                        <label for="direccionDeEmail">Dirección de Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" name="message" type="text" placeholder="Mensaje" style="height: 10rem;" data-sb-validations="required" required></textarea>
+                        <label for="mensaje">Mensaje</label>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg" id="submit" type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </article>
     </main>
     <footer>
         <div id="footerLogoContainer">
@@ -83,5 +122,7 @@
     </footer>
     <script src="../js/menu.js" defer></script>
     <script src="../styles/lightbox2/js/lightbox-plus-jquery.js" defer></script>
+    <script src="../js/contactForm.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
