@@ -21,7 +21,7 @@
         emailjs.init('9it1OXsPSgNdyp2RY')
     </script>
 </head>
-<body id="body" class="lightSection">
+<body id="body" class="lightSection contactBody">
     <header class="headerFix">
         <div class="menu-icon menuBackground">
             <input class="menu-icon__cheeckbox" id="menuButton" type="checkbox">
@@ -45,18 +45,16 @@
     </header>
     <main>
         <article id="contactInfo">
+            <h1 class="m-2">Sobre Mi</h1>
             <div id="contactInfoContent">
-                <div>
-                    <h1>Sobre Mi</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quo quod excepturi eveniet, quos dolores, nesciunt qui praesentium aut esse vero doloremque ex natus voluptate odio non mollitia dolore sequi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo aliquam quasi, eaque ipsa ullam quae. Impedit, eos minus nesciunt reiciendis nihil ea laudantium laborum at sequi aliquid iure omnis similique?
                     Minima ullam incidunt blanditiis beatae consectetur alias ipsum obcaecati praesentium perspiciatis totam pariatur repudiandae eaque eligendi maiores, nisi nihil consequatur a vel voluptate, ipsa qui quis debitis? Repellat, nulla nam.
                     Odio soluta incidunt, dolorum aut a quis doloribus deleniti similique dolor dicta iste officiis vero fugiat vel natus alias. Libero deleniti vero maxime cum hic quidem temporibus architecto reiciendis! At?
                     Esse dignissimos nobis vitae perferendis aliquam laudantium tempore modi molestias quaerat necessitatibus voluptate sunt eos neque id quibusdam, est dolor blanditiis, doloremque repellendus minima nisi voluptates eum corrupti! Nihil, corrupti!</p>
-                </div>
-                <img src="https://placedog.net/200/200">
+                    <img src="https://placedog.net/200/200">
             </div>
         </article>
-        <article>
+        <article class="m-5">
             <div class="container">
                 <form id="contactForm">
                     <div class="form-floating mb-3">
@@ -71,7 +69,7 @@
                         <textarea class="form-control" id="message" name="message" type="text" placeholder="Mensaje" style="height: 10rem;" data-sb-validations="required" required></textarea>
                         <label for="mensaje">Mensaje</label>
                     </div>
-                    <div class="d-grid">
+                    <div class="d-grid mb-3">
                         <button class="btn btn-primary btn-lg" id="submit" type="submit">Enviar</button>
                     </div>
                 </form>
