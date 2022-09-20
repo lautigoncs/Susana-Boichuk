@@ -6,23 +6,13 @@
     font-family: 'Work Sans', sans-serif;
     font-size: 1.2rem;
     img {
-        @media (min-width: 990px) {
+        @media (min-width: 992px) {
             width: clamp(200px, 150vw, 2500px);
         }
         width: clamp(250px, 45vw, 500%);
         margin: 1%;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.271);
         border-radius: 10px;
-    }
-}
-
-
-#contactInfo {
-    padding: 3%;
-    h1 {
-        text-align: center;
-        font-family: 'Dancing Script', cursive !important;
-        font-size: 3.5rem;
     }
 }
 
@@ -34,6 +24,7 @@
     .form-control {
         border: solid 1px black !important;
         background-color: rgba(255, 255, 255, 0.357);
+        transition: background-color 312ms;
     }
     label, textarea {
         font-family: 'Work Sans', sans-serif !important;
@@ -65,4 +56,10 @@
             padding: 5px;
         }
     }
+}
+
+.contactText {
+    text-align: center;
+    font-family: 'Dancing Script', cursive !important;
+    font-size: 3.5rem;
 }

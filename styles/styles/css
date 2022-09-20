@@ -888,94 +888,6 @@ footer {
   width: 15vw;
 }
 
-#filters {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#filters .technique {
-  display: flex;
-  padding: 1vw;
-  align-items: center;
-  align-content: center;
-  flex-direction: column;
-  font-family: "Work Sans", sans-serif;
-  min-width: 420px;
-}
-#filters .technique h2 {
-  font-size: 1.5rem;
-}
-#filters .technique select {
-  width: 75%;
-  padding: 1%;
-  margin: 0.5vw;
-  border-radius: 5px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.208);
-  transition: box-shadow 500ms;
-  text-align: center;
-  cursor: pointer;
-  -webkit-appearance: none;
-}
-#filters .technique select:hover {
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.208);
-}
-#filters .size {
-  display: flex;
-  padding: 1vw;
-  align-items: center;
-  align-content: center;
-  flex-direction: column;
-  font-family: "Work Sans", sans-serif;
-  min-width: 420px;
-}
-#filters .size::before {
-  content: "";
-  position: absolute;
-  height: 80px;
-  width: 1px;
-  background-color: black;
-  left: 50%;
-}
-#filters .size h2 {
-  font-size: 1.5rem;
-}
-#filters .size div {
-  display: flex;
-}
-#filters .size div input {
-  display: none;
-}
-#filters .size div input:checked + label {
-  font-weight: bold !important;
-}
-#filters .size div label {
-  cursor: pointer;
-  margin: 0.5vw 2vw;
-  transition: transform 200ms;
-}
-#filters .size div label:hover {
-  transform: scale(105%);
-}
-#filters .size div label:active {
-  transform: scale(95%);
-}
-
-@media (max-width: 900px) {
-  #filters {
-    flex-direction: column;
-    padding: 10%;
-  }
-  #filters .size::before {
-    content: "";
-    height: 0px;
-    width: 0px;
-    background-color: transparent;
-    left: 0%;
-  }
-  #filters .size, #filters .technique {
-    min-width: 100vw;
-  }
-}
 * {
   margin: 0;
   border: none;
@@ -994,4 +906,4 @@ html {
   display: none;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=css.map */

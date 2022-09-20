@@ -1,0 +1,101 @@
+#paintingsSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    a {
+        .featuredImg {
+            width: 15vw;
+        }
+    }
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .technique {
+        display: flex;
+        padding: 1vw;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        font-family: "Work Sans", sans-serif;
+        min-width: 420px;
+        h2 {
+            font-size: 1.5rem;
+        }
+        select {
+            width: 75%;
+            padding: 1%;
+            margin: .5vw;
+            border-radius: 5px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.208);
+            transition: box-shadow 500ms;
+            text-align: center;
+            cursor: pointer;
+            -webkit-appearance: none;
+            &:hover {
+                box-shadow: 0 15px 20px rgba(0, 0, 0, 0.208);
+            }
+        }
+    }
+    .size {
+        display: flex;
+        padding: 1vw;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        font-family: "Work Sans", sans-serif;
+        min-width: 420px;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 80px;
+            width: 1px;
+            background-color: black;
+            left: 50%;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+        div {
+            display: flex;
+            input {
+                display: none;
+                &:checked + label{
+                    font-weight: bold !important;
+                }
+            }
+            label {
+                cursor: pointer;
+                margin: .5vw 2vw;
+                transition: transform 200ms;
+                &:hover {
+                    transform: scale(105%);
+                }
+                &:active {
+                    transform: scale(95%);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #filters {
+        flex-direction: column;
+        padding: 10%;
+        .size {
+            &::before {
+                content: "";
+                height: 0px;
+                width: 0px;
+                background-color: transparent;
+                left: 0%;
+            }
+        }
+        .size, .technique {
+            min-width: 100vw;
+        }
+    }
+}
